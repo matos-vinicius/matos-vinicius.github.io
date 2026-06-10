@@ -31,14 +31,12 @@
     min-height: 100vh;
   }
 
-  /* ── Layout ── */
   .page {
     max-width: 860px;
     margin: 0 auto;
     padding: 60px 32px 80px;
   }
 
-  /* ── Header ── */
   .header {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -58,10 +56,7 @@
     letter-spacing: -0.02em;
   }
 
-  .name em {
-    color: var(--accent);
-    font-style: italic;
-  }
+  .name em { color: var(--accent); font-style: italic; }
 
   .role {
     font-size: .95rem;
@@ -73,10 +68,7 @@
     font-size: .78rem;
   }
 
-  .lang-toggle {
-    display: flex;
-    gap: 8px;
-  }
+  .lang-toggle { display: flex; gap: 8px; }
 
   .lang-btn {
     background: var(--surface);
@@ -115,7 +107,6 @@
   .contact-item:hover { color: var(--accent); }
   .contact-item svg { opacity: .6; }
 
-  /* ── Section ── */
   .section {
     margin-bottom: 44px;
     animation: fadeUp .6s ease both;
@@ -143,7 +134,6 @@
     background: var(--rule);
   }
 
-  /* ── Summary ── */
   .summary-text {
     font-size: 1.02rem;
     color: var(--muted);
@@ -151,7 +141,6 @@
     max-width: 680px;
   }
 
-  /* ── Experience card ── */
   .exp-card {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -180,8 +169,6 @@
     margin-top: 6px;
   }
   .exp-card:last-child .line { display: none; }
-
-  .exp-body {}
 
   .exp-header {
     display: flex;
@@ -234,21 +221,10 @@
     top: 4px;
   }
 
-  /* ── Education ── */
-  .edu-item {
-    margin-bottom: 16px;
-  }
-  .edu-school {
-    font-weight: 500;
-    font-size: .95rem;
-    color: var(--text);
-  }
-  .edu-degree {
-    font-size: .875rem;
-    color: var(--muted);
-  }
+  .edu-item { margin-bottom: 16px; }
+  .edu-school { font-weight: 500; font-size: .95rem; color: var(--text); }
+  .edu-degree { font-size: .875rem; color: var(--muted); }
 
-  /* ── Skills ── */
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -264,11 +240,7 @@
     margin-bottom: 8px;
   }
 
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
 
   .tag {
     background: var(--tag-bg);
@@ -280,13 +252,8 @@
     border: 1px solid #1d3260;
     transition: all .2s;
   }
-  .tag:hover {
-    background: var(--accent);
-    color: #fff;
-    border-color: var(--accent);
-  }
+  .tag:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
 
-  /* ── Footer ── */
   .footer {
     border-top: 1px solid var(--rule);
     padding-top: 24px;
@@ -298,10 +265,7 @@
     gap: 12px;
   }
 
-  .footer-note {
-    font-size: .8rem;
-    color: var(--muted);
-  }
+  .footer-note { font-size: .8rem; color: var(--muted); }
 
   .download-btn {
     display: inline-flex;
@@ -318,16 +282,13 @@
   }
   .download-btn:hover { opacity: .85; }
 
-  /* ── i18n ── */
   [data-lang] { display: none; }
   .lang-en [data-lang="en"],
   .lang-pt [data-lang="pt"] { display: block; }
-  .contact-row [data-lang="en"],
-  .contact-row [data-lang="pt"],
+  .contact-row [data-lang],
   .lang-en .contact-row [data-lang="en"],
   .lang-pt .contact-row [data-lang="pt"] { display: flex; }
 
-  /* ── Animations ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(18px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -365,6 +326,10 @@
           <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           São Carlos, SP, Brasil
         </span>
+        <a class="contact-item" href="https://linkedin.com/in/viniciusmatossilva" target="_blank">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          linkedin.com/in/viniciusmatossilva
+        </a>
       </div>
     </div>
     <div class="lang-toggle">
@@ -378,10 +343,10 @@
     <div class="section-label" data-lang="en">Professional Summary</div>
     <div class="section-label" data-lang="pt">Resumo Profissional</div>
     <p class="summary-text" data-lang="en">
-      Full-stack developer and data analyst with 3+ years of experience building distributed systems and transforming complex datasets into actionable business insights. Proficient in Clojure, Python, and modern data tooling (Tableau, Power BI, SQL). Passionate about clean architecture, data-driven decision-making, and delivering measurable impact.
+      Full-stack developer and data analyst with 3+ years of experience building distributed systems and managing high-performance digital campaigns. At CSD BR, works with Clojure, Kafka Streams, Kubernetes, and AWS in mission-critical financial systems. At Media.Monks, managed programmatic, Search, and Performance Max campaigns for premium brands, operating DV360, Google Ads, Meta, TikTok, and Pinterest Ads with deep expertise in bulksheets for large-scale campaign optimization.
     </p>
     <p class="summary-text" data-lang="pt">
-      Desenvolvedor full-stack e analista de dados com mais de 3 anos de experiência na construção de sistemas distribuídos e na transformação de dados complexos em insights acionáveis. Habilidoso em Clojure, Python e ferramentas modernas de dados (Tableau, Power BI, SQL). Apaixonado por arquitetura limpa e decisões orientadas a dados.
+      Desenvolvedor full-stack e analista de dados com mais de 3 anos de experiência na construção de sistemas distribuídos e na gestão de campanhas digitais de alta performance. Na CSD BR, atua com Clojure, Kafka Streams, Kubernetes e AWS em sistemas financeiros de missão crítica. Na Media.Monks, gerenciou campanhas programáticas, de Search e Performance Max para marcas premium, operando DV360, Google Ads, Meta, TikTok e Pinterest Ads com domínio de bulksheets para otimização em escala.
     </p>
   </section>
 
@@ -390,7 +355,7 @@
     <div class="section-label" data-lang="en">Experience</div>
     <div class="section-label" data-lang="pt">Experiência</div>
 
-    <!-- CSDBr -->
+    <!-- CSD BR -->
     <div class="exp-card">
       <div class="timeline-dot"><div class="dot"></div><div class="line"></div></div>
       <div class="exp-body">
@@ -400,19 +365,21 @@
           <span class="exp-date" data-lang="en">Jan 2025 – Present</span>
           <span class="exp-date" data-lang="pt">Jan 2025 – Presente</span>
         </div>
-        <div class="exp-company">CSDBr · São Paulo, SP</div>
+        <div class="exp-company">CSD BR · São Carlos, SP</div>
         <ul class="exp-bullets" data-lang="en">
           <li>Build and maintain full-stack applications using Clojure, ClojureScript, and Python.</li>
+          <li>Implement event-driven pipelines with Apache Kafka and Kafka Streams for real-time distributed data processing.</li>
           <li>Design and optimize PostgreSQL schemas and queries for high-throughput workloads.</li>
-          <li>Implement event-driven pipelines with Apache Kafka for real-time distributed data processing.</li>
           <li>Manage scalable NoSQL datastores using Apache Cassandra.</li>
+          <li>Cloud infrastructure on AWS and container orchestration with Kubernetes.</li>
           <li>Collaborate cross-functionally to deliver seamless backend-frontend integrations.</li>
         </ul>
         <ul class="exp-bullets" data-lang="pt">
           <li>Desenvolvimento e manutenção de aplicações full-stack com Clojure, ClojureScript e Python.</li>
+          <li>Implementação de pipelines orientados a eventos com Apache Kafka e Kafka Streams para processamento distribuído em tempo real.</li>
           <li>Modelagem e otimização de schemas e consultas PostgreSQL para cargas de alto desempenho.</li>
-          <li>Implementação de pipelines orientados a eventos com Apache Kafka para processamento em tempo real.</li>
           <li>Gerenciamento de datastores NoSQL escaláveis com Apache Cassandra.</li>
+          <li>Infraestrutura em nuvem com AWS e orquestração de contêineres com Kubernetes.</li>
           <li>Colaboração cross-funcional para entregar integrações fluidas entre backend e frontend.</li>
         </ul>
       </div>
@@ -425,19 +392,24 @@
         <div class="exp-header">
           <span class="exp-title" data-lang="en">International Media Analyst</span>
           <span class="exp-title" data-lang="pt">Analista de Mídia Internacional</span>
-          <span class="exp-date">Mai 2022 – Jan 2025</span>
+          <span class="exp-date" data-lang="en">May 2022 – Jan 2025</span>
+          <span class="exp-date" data-lang="pt">Mai 2022 – Jan 2025</span>
         </div>
         <div class="exp-company">Media.Monks Brazil · São Paulo, SP</div>
         <ul class="exp-bullets" data-lang="en">
-          <li>Performed end-to-end data analysis to optimize media strategies across 10+ client accounts.</li>
+          <li>Planned, built, and optimized Search, Performance Max, Display, and programmatic campaigns via Google DV360 and Google Ads across 10+ premium client accounts.</li>
+          <li>Managed paid social campaigns with expertise in Meta Ads, TikTok Ads, and Pinterest Ads, covering full campaign lifecycle from setup to performance analysis.</li>
+          <li>Built and optimized campaigns at scale using bulksheets, reducing setup time and minimizing operational errors.</li>
           <li>Built interactive Tableau dashboards adopted by stakeholders to track campaign KPIs.</li>
-          <li>Produced weekly and monthly reports with data-backed recommendations, reducing decision time by ~30%.</li>
+          <li>Produced weekly and monthly reports with data-backed recommendations, reducing decision time by 30%.</li>
           <li>Identified performance trends and anomalies, enabling proactive budget reallocations.</li>
         </ul>
         <ul class="exp-bullets" data-lang="pt">
-          <li>Análise de dados end-to-end para otimização de estratégias de mídia em 10+ contas de clientes.</li>
-          <li>Criação de dashboards interativos no Tableau adotados por stakeholders para acompanhamento de KPIs.</li>
-          <li>Produção de relatórios com recomendações baseadas em dados, reduzindo o tempo de decisão em ~30%.</li>
+          <li>Planejamento, criação e otimização de campanhas em Search, Performance Max, Display e mídia programática via Google DV360 e Google Ads para 10+ contas de clientes premium.</li>
+          <li>Gestão de campanhas de mídia social com expertise em Meta Ads, TikTok Ads e Pinterest Ads, desde a estrutura de campanhas até a análise de resultados.</li>
+          <li>Construção e otimização de campanhas em escala utilizando bulksheets, reduzindo tempo de setup e minimizando erros operacionais.</li>
+          <li>Criação de dashboards interativos no Tableau adotados por stakeholders para acompanhamento de KPIs de campanha.</li>
+          <li>Produção de relatórios semanais e mensais com recomendações baseadas em dados, reduzindo o tempo de decisão em 30%.</li>
           <li>Identificação de tendências e anomalias de desempenho, viabilizando realocações proativas de verba.</li>
         </ul>
       </div>
@@ -452,14 +424,14 @@
     <div class="edu-item">
       <div class="edu-school" data-lang="en">São Paulo Federal Institute of Education, Science &amp; Technology (IFSP)</div>
       <div class="edu-school" data-lang="pt">Instituto Federal de Educação, Ciência e Tecnologia de São Paulo (IFSP)</div>
-      <div class="edu-degree" data-lang="en">Bachelor's Degree · Systems Analysis and Development</div>
-      <div class="edu-degree" data-lang="pt">Tecnólogo · Análise e Desenvolvimento de Sistemas</div>
+      <div class="edu-degree" data-lang="en">Bachelor's Degree · Systems Analysis and Development · 2023 – 2026</div>
+      <div class="edu-degree" data-lang="pt">Tecnólogo · Análise e Desenvolvimento de Sistemas · 2023 – 2026</div>
     </div>
     <div class="edu-item">
       <div class="edu-school" data-lang="en">São Paulo Federal Institute of Education, Science &amp; Technology (IFSP)</div>
       <div class="edu-school" data-lang="pt">Instituto Federal de Educação, Ciência e Tecnologia de São Paulo (IFSP)</div>
-      <div class="edu-degree" data-lang="en">High School with Technical Training · Informatics</div>
-      <div class="edu-degree" data-lang="pt">Ensino Médio Integrado ao Técnico · Informática</div>
+      <div class="edu-degree" data-lang="en">High School with Technical Training · Informatics · 2016 – 2019</div>
+      <div class="edu-degree" data-lang="pt">Ensino Médio Integrado ao Técnico · Informática · 2016 – 2019</div>
     </div>
   </section>
 
@@ -496,11 +468,28 @@
         </div>
       </div>
       <div>
-        <div class="skill-group-label" data-lang="en">Infrastructure</div>
-        <div class="skill-group-label" data-lang="pt">Infraestrutura</div>
+        <div class="skill-group-label" data-lang="en">Streaming &amp; Messaging</div>
+        <div class="skill-group-label" data-lang="pt">Streaming &amp; Mensageria</div>
         <div class="tags">
-          <span class="tag">Apache Kafka</span><span class="tag">Distributed Systems</span>
-          <span class="tag">Event-Driven</span>
+          <span class="tag">Apache Kafka</span><span class="tag">Kafka Streams</span>
+          <span class="tag">Event-Driven</span><span class="tag">Distributed Systems</span>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-label" data-lang="en">Cloud &amp; Infrastructure</div>
+        <div class="skill-group-label" data-lang="pt">Cloud &amp; Infraestrutura</div>
+        <div class="tags">
+          <span class="tag">AWS</span><span class="tag">Kubernetes</span><span class="tag">Docker</span>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-label" data-lang="en">Digital Media</div>
+        <div class="skill-group-label" data-lang="pt">Mídia Digital</div>
+        <div class="tags">
+          <span class="tag">DV360</span><span class="tag">Google Ads</span>
+          <span class="tag">Meta Ads</span><span class="tag">TikTok Ads</span>
+          <span class="tag">Pinterest Ads</span><span class="tag">Bulksheets</span>
+          <span class="tag">Search</span><span class="tag">Performance Max</span>
         </div>
       </div>
     </div>
@@ -508,8 +497,8 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <span class="footer-note" data-lang="en">Last updated: May 2026</span>
-    <span class="footer-note" data-lang="pt">Atualizado: Maio 2026</span>
+    <span class="footer-note" data-lang="en">Last updated: June 2026</span>
+    <span class="footer-note" data-lang="pt">Atualizado: Junho 2026</span>
     <a class="download-btn" href="Vinicius_de_Matos_Silva_Resume_EN.pdf" download>
       <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
       <span data-lang="en">Download PDF (EN)</span>
